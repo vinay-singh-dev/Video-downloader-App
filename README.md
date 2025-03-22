@@ -1,51 +1,57 @@
-# VideoDownloader-Advanced
+# 📥 Video Downloader App
 
-Android library wrapper for [youtube-dl](https://github.com/rg3/youtube-dl) executable.
-Based on [yausername's youtubedl-android](https://github.com/yausername/youtubedl-android) with ability to download videos in different resolutions from more than
-[other 1000 sites](http://rg3.github.io/youtube-dl/supportedsites.html)
+## 📌 Overview
+The **Video Downloader App** allows users to download videos from various platforms with ease. It supports multiple formats, high-speed downloads, and background downloading. The app is built using **Kotlin** with a user-friendly **Material Design UI** and follows **MVVM architecture**.
 
-## Features
+## 🎯 Features
+- 🔹 Download Videos in Multiple Resolutions 📺
+- 🔹 Background Downloading ⏳
+- 🔹 Pause, Resume & Cancel Downloads 🚀
+- 🔹 Built-in Video Player 🎥
+- 🔹 Secure & Fast Download Manager ⚡
+- 🔹 Dark Mode Support 🌙
 
-- Download videos from Youtube, Facebook, Twitter, Instagram, Dailymotion, Vimeo and more than [other 1000 sites](http://rg3.github.io/youtube-dl/supportedsites.html)
-- Browse videos with the built-in browser
-- Download videos with the built-in download manager
-- Play videos offline with the built-in player
-- Save your favorite videos online and watch them later without downloading them
-- Save bookmark and history as a real browser
-- Scan website to get download link 
-- Download video in different resolution
+## 🛠 Tech Stack
+- **Language:** Kotlin
+- **UI Framework:** Jetpack Compose / XML
+- **Architecture:** MVVM (Model-View-ViewModel)
+- **Networking:** Retrofit / OkHttp
+- **Storage:** Android File System / Room Database
+- **Permissions:** Android Scoped Storage & Download Manager
+
+## 🔧 Setup & Installation
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/vinay-singh-dev/video-downloader-app.git
+   ```
+2. **Open in Android Studio**
+3. **Grant Necessary Permissions in `AndroidManifest.xml`**
+4. **Sync Gradle & Run the App**
+   ```bash
+   gradle sync
+   ```
+
+## 📝 Usage Example (Kotlin - Downloading a Video with OkHttp)
+```kotlin
+val request = Request.Builder()
+    .url(videoUrl)
+    .build()
+val response = OkHttpClient().newCall(request).execute()
+val inputStream = response.body?.byteStream()
+// Save the input stream to file storage
+```
 
 
-## Screenshots
-</br>
-<div align="center">
-   <table align="center" border="0" >
-  <tr>
-    <td>
-<img width="360"
-src="screenshots/Screenshot1.png"/>
-       <td><img width="360"
-src="screenshots/Screenshot11.png"/>
-    </td>
-     <td> <img width="360"
-src="screenshots/Screenshot2.png"/></td>
-  </table>
-  </div>
-</br>
-<div align="center">
-  <table align="center" border="0" >
-  <tr>
-    <td> <img width="360"
-src="screenshots/Screenshot4.png"/></td>
-     <td> <img width="360"
-src="screenshots/Screenshot5.png"/></td>
-     <td> <img width="360"
-src="screenshots/Screenshot6.png"/></td>
-  </tr>
-</table>
-  </div>
-</br>
+## 🔥 Future Enhancements
+- **YouTube & Social Media Integration** 📲
+- **Support for Audio-Only Downloads** 🎵
+- **Cloud Sync for Downloads** ☁️
+- **In-app Browser for Direct Video Links** 🌍
 
-## License
+## ⚠️ Disclaimer
+This app should be used **only for downloading freely available content**. Downloading copyrighted material without permission may violate laws.
 
-This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details.
+## 🤝 Contribution
+Contributions are welcome! Feel free to open issues and submit pull requests.
+
+🚀 **Start downloading your favorite videos with ease!**
